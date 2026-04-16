@@ -66,8 +66,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="*" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="*" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
 		<PackageReference Include="Azure.AI.OpenAI" Version="2.3.0-beta.2" />
 		<PackageReference Include="Azure.Identity" Version="1.19.0" />
 		<PackageReference Include="Microsoft.Extensions.AI" Version="9.9.0" />
