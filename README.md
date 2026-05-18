@@ -5,9 +5,9 @@ This sample demonstrates how to get started with the .NET MAUI Smart Text Editor
 ## Sample
 
 ```xaml
-    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30">
 
-        <StackLayout>
+        <VerticalStackLayout>
             <Label Text="Role" FontAttributes="Bold"/>
             <editors:SfComboBox ItemsSource="{Binding Roles}"
                                 DisplayMemberPath="Text" TextMemberPath="Text"
@@ -15,16 +15,16 @@ This sample demonstrates how to get started with the .NET MAUI Smart Text Editor
                                 SelectedItem="{Binding SelectedRole}"
                                 IsClearButtonVisible="False">
             </editors:SfComboBox>
-        </StackLayout>
+        </VerticalStackLayout>
 
-        <StackLayout>
+        <VerticalStackLayout>
             <Label Text="Response" FontAttributes="Bold" />
             <smarttexteditor:SfSmartTextEditor HeightRequest="200" WidthRequest="500"
-                                               UserRole="{Binding CurrentPreset.UserRole}"
-                                               Placeholder="{Binding CurrentPreset.PlaceHolder}"/>
-        </StackLayout>
+                                            UserRole="{Binding CurrentPreset.UserRole}"
+                                            Placeholder="{Binding CurrentPreset.PlaceHolder}"/>
+        </VerticalStackLayout>
         
-    </VerticalStackLayout>
+    </StackLayout>
 ```
 
 ## Requirements to run the demo
