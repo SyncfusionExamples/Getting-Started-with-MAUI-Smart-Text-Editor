@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents"
+             xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:local="clr-namespace:SmartTextEditorSample"
+             x:Class="SmartTextEditorSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30">
+
+        <VerticalStackLayout>
+            <Label Text="Role" FontAttributes="Bold"/>
+            <editors:SfComboBox ItemsSource="{Binding Roles}"
+                                DisplayMemberPath="Text" TextMemberPath="Text"
+                                HeightRequest="45" WidthRequest="500" 
+                                SelectedItem="{Binding SelectedRole}"
+                                IsClearButtonVisible="False">
+            </editors:SfComboBox>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Response" FontAttributes="Bold" />
+            <smarttexteditor:SfSmartTextEditor HeightRequest="200" WidthRequest="500"
+                                               UserRole="{Binding CurrentPreset.UserRole}"
+                                               Placeholder="{Binding CurrentPreset.PlaceHolder}"/>
+        </VerticalStackLayout>
+    </StackLayout>
+
+</ContentPage>
